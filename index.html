@@ -1,12 +1,157 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
+
+<head>
     <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
-  </head>
-  <body>
+    <title></title>
+</head>
 
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Базовый HTML и CSS</a>».</p>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <nav class="main-navigation">
+                <!-- сомнения, куда вставлять логотип - по идее, он же посередине списка, играет это какую-то роль, или css в помошь? -->
+                <div class="logo">
+                    <img src="#" width="" height="" alt="Sedona">
+                </div>
+                <ul>
+                    <li class="nav-left">
+                        <a href="#">Информация</a>
+                    </li>
+                    <li class="nav-left">
+                        <a href="#">Фото и видео</a>
+                    </li>
+                    <li class="nav-right">
+                        <a href="#">Карта штата</a>
+                    </li>
+                    <li class="nav-right">
+                        <a href="#">Гостиницы</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="container">
+        <div class="main-image">
+            <img src="#" width="" height="" alt="Sedona view">
+            <img src="#" width="" height="" alt="Welcome">
+        </div>
+        <!-- вопрос с классом -->
+        <div class="">
+            <h2>Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
+            <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+        </div>
+        <div class="features-row-1">
+            <div class="feature-item">
+                <h2>Настоящий городок</h2>
+                <span>-№1-</span>
+                <p>Седона — не аттракцион для туристов, там течет своя жизнь</p>
+            </div>
+            <!-- вопрос с классом -->
+            <div class="">
+                <img src="#" width="" height="" alt="">
+            </div>
+        </div>
+        <div class="features-row-2">
+            <div class="feature-item">
+                <!-- img or css? -->
+                <img src="#" width="" height="" alt="house">
+                <h2>Жилье</h2>
+                <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+            </div>
+            <div class="feature-item">
+                <!-- img or css? -->
+                <img src="#" width="" height="" alt="burger">
+                <h2>Еда</h2>
+                <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+            </div>
+            <div class="feature-item">
+                <!-- img or css? -->
+                <img src="#" width="" height="" alt="present">
+                <h2>Сувениры</h2>
+                <p>Не только китайского, но и местного производства!</p>
+            </div>
+        </div>
+        <div class="features-row-3">
+            <!-- вопрос с классом -->
+            <div class="">
+                <img src="#" width="" height="" alt="">
+            </div>
+            <div class="feature-item">
+                <h2>Там есть мост дьявола</h2>
+                <span>-№2-</span>
+                <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+            </div>
+        </div>
+        <div class="features-row-4">
+            <div class="feature-item">
+                <h2>Небольшая площадь</h2>
+                <span>-№3-</span>
+                <p>Все достопримечательности находятся очень близко</p>
+            </div>
+            <div class="feature-item">
+                <h2>Красивая дорога</h2>
+                <span>-№4-</span>
+                <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+            </div>
+            <div class="feature-item">
+                <h2>Мало туристов</h2>
+                <span>-№5-</span>
+                <p>Большинство едет в Гранд Каньон и толпится там</p>
+            </div>
+        </div>
+        <div class="search">
+            <!-- вопрос с классом -->
+            <div class="">
+                <h1>Заинтересовались?</h1>
+                <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+                <button type="button" class="btn">Поиск гостиницы в Седоне</button>
+            </div>
+            <!-- как оформить интерактивную карту? -->
+            <div class="map">
+                <img src="#" width="" height="" alt="map">
+                <!-- глобальный вопрос по форме - че-то с ними пока не очень, какие ошибки? -->
+                <form action="№" method="post">
+                    <label>
+                        Дата заезда
+                        <input type="date" value="date-check-in" placeholder="24 апреля 2016">
+                        <img src="#" width="" height="" alt="">
+                    </label>
+                    <label>
+                        Дата выезда
+                        <input type="date" value="date-check-out" placeholder="4 июля 2016">
+                        <img src="#" width="" height="" alt="">
+                    </label>
+                    <label>
+                        Взрослые
+                        <input type="number" min="1" max="5" value="adult">
+                    </label>
+                    <label>
+                        Дети
+                        <input type="number" min="1" max="5" value="children">
+                    </label>
+                    <input  class="btn" type="submit" value="Найти">
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer class="main-footer">
+        <div class="container">
+            <!-- не уверена в оформлении-->
+            <section class="footer-visit">
+                <a class="btn" href="#">#VISITSEDONA</a>
+            </section>
+            <section class="footer-social">
+                <a class="social-btn social-btn-tw" href="#">Twitter</a>
+                <a class="social-btn social-btn-fb" href="#">Facebook</a>
+                <a class="social-btn social-btn-yt" href="#">YouTube</a>
+            </section>
+            <section class="footer-copyright">
+                <p>Website by</p>
+                <a class="btn" href="https://htmlacademy.ru">HTML Academy</a>
+            </section>
+        </div>
+    </footer>
+</body>
 
-  </body>
 </html>
