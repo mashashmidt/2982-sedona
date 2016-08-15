@@ -1,0 +1,28 @@
+body {
+    font-family: "PTSans Regular", "Arial", sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 21px;
+    color: #333333; 
+    text-transform: uppercase;
+}
+
+h1 {
+    font-family: "PTSans Bold", "Arial", sans-serif ;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 24px;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-family: "PTSans Bold", "Arial", sans-serif;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 21px;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+/* сейчас поняла, что, если разметка правильная, наверно для белых features нужен дополнительный класс? */
