@@ -8,10 +8,10 @@
 </head>
 
 <body>
-    <header class="main-header">
-        <div class="container">
+    <!-- тег main мы используем?-->
+    <div class="container">
+        <header class="main-header">
             <nav class="main-navigation">
-                <!-- сомнения, куда вставлять логотип - по идее, он же посередине списка, играет это какую-то роль, или css в помошь? -->
                 <div class="logo">
                     <img src="img/logo-sedona.png" width="138" height="70" alt="Sedona">
                 </div>
@@ -30,9 +30,7 @@
                     </li>
                 </ul>
             </nav>
-        </div>
-    </header>
-    <main class="container">
+        </header>
         <div class="main-image">
             <img src="#" width="" height="" alt="Sedona view">
             <img src="" width="" height="" alt="Welcome">
@@ -42,37 +40,33 @@
             <h2>Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
             <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
         </div>
-        <div class="features-row-1">
+        <!-- а вторая и четвертая строчка остаются такими же по классу, с номерами 2 и 4?-->
+        <div class="features-row">
             <div class="feature-item">
                 <h2>Настоящий городок</h2>
                 <span>-№1-</span>
                 <p>Седона — не аттракцион для туристов, там течет своя жизнь</p>
             </div>
-            <!-- вопрос с классом -->
-            <div class="">
+            <div class="features-img">
                 <img src="#" width="" height="" alt="">
             </div>
         </div>
         <div class="features-row-2">
-            <div class="feature-item">
-                <img src="img/icon-house.png" width="75" height="72" alt="house">
+            <div class="feature-item feature-house">
                 <h2>Жилье</h2>
                 <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
             </div>
-            <div class="feature-item">
-                <img src="img/icon-burger.png" width="74" height="70" alt="burger">
+            <div class="feature-item feature-burger">
                 <h2>Еда</h2>
                 <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
             </div>
-            <div class="feature-item">
-                <img src="img/icon-present.png" width="64" height="76" alt="present">
+            <div class="feature-item feature-present">
                 <h2>Сувениры</h2>
                 <p>Не только китайского, но и местного производства!</p>
             </div>
         </div>
-        <div class="features-row-3">
-            <!-- вопрос с классом -->
-            <div class="">
+        <div class="features-row features-inverse">
+            <div class="features-img">
                 <img src="#" width="" height="" alt="">
             </div>
             <div class="feature-item">
@@ -99,43 +93,47 @@
             </div>
         </div>
         <div class="search">
-            <!-- вопрос с классом -->
-            <div class="">
-                <h1>Заинтересовались?</h1>
-                <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-                <button type="button" class="btn">Поиск гостиницы в Седоне</button>
-            </div>
-            <!-- как оформить интерактивную карту? -->
-            <div class="map">
-                <img src="img/map.jpg" width="1200" height="593" alt="map">
-                <!-- глобальный вопрос по форме - че-то с ними пока не очень, какие ошибки? не поняла, как оформить календарь? -->
-                <form action="№" method="post">
-                    <label>
-                        Дата заезда
-                        <input type="date" value="date-check-in" placeholder="24 апреля 2016">
-                        <img src="#" width="" height="" alt="">
-                    </label>
-                    <label>
-                        Дата выезда
-                        <input type="date" value="date-check-out" placeholder="4 июля 2016">
-                        <img src="#" width="" height="" alt="">
-                    </label>
-                    <label>
-                        Взрослые
-                        <input type="number" min="1" max="5" value="adult">
-                    </label>
-                    <label>
-                        Дети
-                        <input type="number" min="1" max="5" value="children">
-                    </label>
-                    <input  class="btn" type="submit" value="Найти">
-                </form>
-            </div>
+            <h1>Заинтересовались?</h1>
+            <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+            <button type="button" class="btn">Поиск гостиницы в Седоне</button>
+            <form action="№" method="post">
+                <div class="form">
+                    <div class="form-group">
+                        <label for="check-in" class="form-label">Дата заезда</label>
+                        <div class="form-inner">
+                            <input type="text" class="form-input" id="check-in"><span class="form-control calendar"></span></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="check-out" class="form-label">Дата выезда</label>
+                        <div class="form-inner">
+                            <input type="text" class="form-input" id="check-out"><span class="form-control calendar"></span></div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="adults" class="form-label">Взрослые</label>
+                        <div class="form-inner">
+                            <input type="text" class="form-input" id="adults">
+                            <span class="form-control plus"></span>
+                            <span class="form-control minus"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="children" class="form-label">Дети</label>
+                        <div class="form-inner">
+                            <input type="text" class="form-input" id="children">
+                            <span class="form-control plus"></span>
+                            <span class="form-control minus"></span>
+                        </div>
+                    </div>
+                </div>
+                <input class="btn" type="submit" value="Найти">
+            </form>
         </div>
-    </main>
-    <footer class="main-footer">
-        <div class="container">
-            <!-- не уверена в оформлении-->
+        <div class="map">
+            <img src="img/map.jpg" width="1200" height="593" alt="map">
+        </div>
+        <footer class="main-footer">
             <section class="footer-visit">
                 <a class="btn" href="#">#VISITSEDONA</a>
             </section>
@@ -150,8 +148,8 @@
                     <img src="img/logo-academy.png" width="113" height="39" alt="HTML Academy">
                 </a>
             </section>
-        </div>
-    </footer>
+        </footer>
+    </div>
 </body>
 
 </html>

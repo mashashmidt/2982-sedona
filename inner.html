@@ -8,10 +8,10 @@
 </head>
 
 <body>
+    <!-- здесь тоже все оборачивать в один контейнер?-->
     <header class="main-header">
         <div class="container">
             <nav class="main-navigation">
-                <!-- сомнения, куда вставлять логотип - по идее, он же посередине списка, играет это какую-то роль, или css в помошь? -->
                 <div class="logo">
                     <a href="#">
                         <img src="img/logo-sedona.png" width="138" height="70" alt="Sedona">
@@ -41,54 +41,57 @@
                 <div class="filter-block">
                     <h2 class="filter-title">Инфраструктура:</h2>
                     <label class="filter-label">
-                        <input class="filter-input filter-checkbox" type="checkbox" name="infrastructure" value="pool" checked> Бассейн
+                        <input class="filter-input filter-checkbox" type="checkbox" name="infrastructure" value="pool" checked><span>Бассейн</span>
                     </label>
                     <label class="filter-label">
-                        <input class="filter-input filter-checkbox" type="checkbox" name="infrastructure" value="parking"> Парковка
+                        <input class="filter-input filter-checkbox" type="checkbox" name="infrastructure" value="parking"><span>Парковка</span>
                     </label>
                     <label class="filter-label">
-                        <input class="filter-input filter-checkbox" type="checkbox" name="infrastructure" value="wifi"> Wi-Fi
+                        <input class="filter-input filter-checkbox" type="checkbox" name="infrastructure" value="wifi"><span>Wi-Fi</span>
                     </label>
                 </div>
                 <div class="filter-block">
                     <h2 class="filter-title">Тип жилья:</h2>
                     <label class="filter-label">
-                        <input class="filter-input filter-checkbox" type="checkbox" name="housing" value="hotel" checked> Гостиница
+                        <input class="filter-input filter-checkbox" type="checkbox" name="housing" value="hotel" checked><span>Гостиница</span>
                     </label>
                     <label class="filter-label">
-                        <input class="filter-input filter-checkbox" type="checkbox" name="housing" value="motel" checked> Мотель
+                        <input class="filter-input filter-checkbox" type="checkbox" name="housing" value="motel" checked><span>Мотель</span>
                     </label>
                     <label class="filter-label">
-                        <input class="filter-input filter-checkbox" type="checkbox" name="housing" value="apartments" checked> Апартаменты
+                        <input class="filter-input filter-checkbox" type="checkbox" name="housing" value="apartments" checked><span>Апартаменты</span>
                     </label>
                 </div>
-                <!-- вопрос, как правильно оформить ползунки? -->
+                <!-- ползунки -->
                 <div class="filter-block">
                     <h2 class="filter-title">Стоимость в сутки (Р):</h2>
-                    <input type="number" min="1" max="30000">
-                    <input type="number" min="1" max="30000">
-                    <div class="slider"></div>
+                    <div class="range-filter">
+                        <div class="price-controls">
+                            <input class="min-price" type="text" value="от 0">
+                            <input class="max-price" type="text" value="до 3000">
+                        </div>
+                        <div class="range-controls">
+                            <div class="scale"></div>
+                            <div class="toggle min-toggle"></div>
+                            <div class="toggle max-toggle"></div>
+                        </div>
+                    </div>
                     <input class="btn filter-btn" type="submit" value="Показать">
                 </div>
             </form>
         </div>
         <div class="sort">
-            <!-- вопрос с классом -->
-            <span class="">Найдено:3</span>
-            <!-- вопрос с классом -->
-            <span class="">Сортировка:</span>
-            <ul>
-                <li>
-                   <span>По цене</span>
-                </li>
-                <li>
-                    <a href="#">По типу</a>
-                </li>
-                <li>
-                    <a href="#">По рейтингу</a>
-                </li>
-            </ul>
-            <div class="up-down">
+            <div class="sort-found">
+                <span>Найдено:3</span>
+            </div>
+            <!-- можешь объяснить плз, почему без списка? и праавильное оформление получилось? -->
+            <div class="sort-type">
+                <span>Сортировка:</span>
+                <span>По цене</span>
+                <a href="#">По типу</a>
+                <a href="#">По рейтингу</a>
+            </div>
+            <div class="sort-dir">
                 <a href="#"></a>
                 <a href="#"></a>
             </div>
@@ -99,18 +102,18 @@
             </div>
             <div class="hotel-info">
                 <h2 class="hotel-name">Amara resort &amp; spa</h2>
-                <!-- вопрос с оформлением -->
+                <!-- при таком оформлении можно будет точно подогнать цену к началу кнопки забронировать, да? -->
                 <div>
                     <span>Гостиница</span>
-                    <a class="btn" href="#">Подробнее</a>
+                    <span>от 3500 Р.</span>
                 </div>
                 <div>
-                    <span>от 3500 Р.</span>
+                    <a class="btn" href="#">Подробнее</a>
                     <a class="btn" href="#">Забронировать</a>
                 </div>
             </div>
             <div class="hotel-rating">
-                <span class="stars"></span>
+                <span class="stars stars-4"></span>
                 <span class="rating">Рейтинг: 8,5</span>
             </div>
         </div>
@@ -123,15 +126,15 @@
                 <!-- вопрос с оформлением -->
                 <div>
                     <span>Мотель</span>
-                    <a class="btn" href="#">Подробнее</a>
+                    <span>от 2000 Р.</span>
                 </div>
                 <div>
-                    <span>от 2000 Р.</span>
+                    <a class="btn" href="#">Подробнее</a>
                     <a class="btn" href="#">Забронировать</a>
                 </div>
             </div>
             <div class="hotel-rating">
-                <span class="stars"></span>
+                <span class="stars stars-2"></span>
                 <span class="rating">Рейтинг: 8,9</span>
             </div>
         </div>
@@ -144,22 +147,21 @@
                 <!-- вопрос с оформлением -->
                 <div>
                     <span>Апартаменты</span>
-                    <a class="btn" href="#">Подробнее</a>
+                    <span>от 4000 Р.</span>
                 </div>
                 <div>
-                    <span>от 4000 Р.</span>
+                    <a class="btn" href="#">Подробнее</a>
                     <a class="btn" href="#">Забронировать</a>
                 </div>
             </div>
             <div class="hotel-rating">
-                <span class="stars"></span>
+                <span class="stars stars-3"></span>
                 <span class="rating">Рейтинг: 9,2</span>
             </div>
         </div>
     </main>
     <footer class="main-footer">
         <div class="container">
-            <!-- не уверена в оформлении-->
             <section class="footer-visit">
                 <a class="btn" href="#">#VISITSEDONA</a>
             </section>
