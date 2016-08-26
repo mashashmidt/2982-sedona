@@ -4,15 +4,16 @@
 <head>
     <meta charset="utf-8">
     <title></title>
-    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
-    <!-- тег main мы используем?-->
+<body class="main-page">
     <div class="container">
-        <header class="main-header">
+        <header class="main-header clearfix">
             <nav class="main-navigation">
-                <div class="logo">
+               <div class="logo-sedona">
                     <img src="img/logo-sedona.png" width="138" height="70" alt="Sedona">
                 </div>
                 <ul>
@@ -23,119 +24,116 @@
                         <a href="#">Фото и видео</a>
                     </li>
                     <li class="nav-right">
-                        <a href="#">Карта штата</a>
+                        <a href="#">Гостиницы</a>
                     </li>
                     <li class="nav-right">
-                        <a href="#">Гостиницы</a>
+                        <a href="#">Карта штата</a>
                     </li>
                 </ul>
             </nav>
         </header>
-        <div class="main-image">
-            <img src="#" width="" height="" alt="Sedona view">
-            <img src="" width="" height="" alt="Welcome">
-        </div>
-        <!-- вопрос с классом -->
-        <div class="">
-            <h2>Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
-            <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
-        </div>
-        <!-- а вторая и четвертая строчка остаются такими же по классу, с номерами 2 и 4?-->
-        <div class="features-row">
-            <div class="feature-item">
-                <h2>Настоящий городок</h2>
-                <span>-№1-</span>
-                <p>Седона — не аттракцион для туристов, там течет своя жизнь</p>
+        <main class="main-content">
+            <div class="main-image">
+                <img class="welcome" src="img/background-text.png" width="458" height="352" alt="Welcome">
             </div>
-            <div class="features-img">
-                <img src="#" width="" height="" alt="">
+            <div class="sedona-description">
+                <h2>Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
+                <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
             </div>
-        </div>
-        <div class="features-row-2">
-            <div class="feature-item feature-house">
-                <h2>Жилье</h2>
-                <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
-            </div>
-            <div class="feature-item feature-burger">
-                <h2>Еда</h2>
-                <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
-            </div>
-            <div class="feature-item feature-present">
-                <h2>Сувениры</h2>
-                <p>Не только китайского, но и местного производства!</p>
-            </div>
-        </div>
-        <div class="features-row features-inverse">
-            <div class="features-img">
-                <img src="#" width="" height="" alt="">
-            </div>
-            <div class="feature-item">
-                <h2>Там есть мост дьявола</h2>
-                <span>-№2-</span>
-                <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
-            </div>
-        </div>
-        <div class="features-row-4">
-            <div class="feature-item">
-                <h2>Небольшая площадь</h2>
-                <span>-№3-</span>
-                <p>Все достопримечательности находятся очень близко</p>
-            </div>
-            <div class="feature-item">
-                <h2>Красивая дорога</h2>
-                <span>-№4-</span>
-                <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
-            </div>
-            <div class="feature-item">
-                <h2>Мало туристов</h2>
-                <span>-№5-</span>
-                <p>Большинство едет в Гранд Каньон и толпится там</p>
-            </div>
-        </div>
-        <div class="search">
-            <h1>Заинтересовались?</h1>
-            <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-            <button type="button" class="btn">Поиск гостиницы в Седоне</button>
-            <form action="№" method="post">
-                <div class="form">
-                    <div class="form-group">
-                        <label for="check-in" class="form-label">Дата заезда</label>
-                        <div class="form-inner">
-                            <input type="text" class="form-input" id="check-in"><span class="form-control calendar"></span></div>
-                    </div>
-                    <div class="form-group">
-                        <label for="check-out" class="form-label">Дата выезда</label>
-                        <div class="form-inner">
-                            <input type="text" class="form-input" id="check-out"><span class="form-control calendar"></span></div>
-                    </div>
+            <div class="features-row-item-img features-inverse clearfix">
+                <div class="features-item">
+                    <h2>Настоящий<br> городок</h2>
+                    <span>-№1-</span>
+                    <p>Седона — не аттракцион для туристов, там течет своя жизнь</p>
                 </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="adults" class="form-label">Взрослые</label>
-                        <div class="form-inner">
-                            <input type="text" class="form-input" id="adults">
-                            <span class="form-control plus"></span>
-                            <span class="form-control minus"></span>
+                <div class="features-img">
+                </div>
+            </div>
+            <div class="features-row-white clearfix">
+                <div class="features-item features-house">
+                    <h2>Жилье</h2>
+                    <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+                </div>
+                <div class="features-item features-burger">
+                    <h2>Еда</h2>
+                    <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+                </div>
+                <div class="features-item features-present">
+                    <h2>Сувениры</h2>
+                    <p>Не только китайского, но и местного производства!</p>
+                </div>
+            </div>
+            <div class="features-row-img-item features-inverse clearfix">
+                <div class="features-img">
+                </div>
+                <div class="features-item">
+                    <h2>Там есть<br> мост дьявола</h2>
+                    <span>-№2-</span>
+                    <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+                </div>
+            </div>
+            <div class="features-row-gray clearfix">
+                <div class="features-item">
+                    <h2>Небольшая<br>площадь</h2>
+                    <span>-№3-</span>
+                    <p>Все достопримечательности находятся очень близко</p>
+                </div>
+                <div class="features-item">
+                    <h2>Красивая<br>дорога</h2>
+                    <span>-№4-</span>
+                    <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+                </div>
+                <div class="features-item">
+                    <h2>Мало<br>туристов</h2>
+                    <span>-№5-</span>
+                    <p>Большинство едет в Гранд Каньон и толпится там</p>
+                </div>
+            </div>
+            <div class="search">
+                <h1>Заинтересовались?</h1>
+                <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+                <button type="button" class="btn">Поиск гостиницы в Седоне</button>
+                <form action="№" method="post">
+                    <div class="form">
+                        <div class="form-group">
+                            <label for="check-in" class="form-label">Дата заезда</label>
+                            <div class="form-inner">
+                                <input type="text" class="form-input" id="check-in"><span class="form-control calendar"></span></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="check-out" class="form-label">Дата выезда</label>
+                            <div class="form-inner">
+                                <input type="text" class="form-input" id="check-out"><span class="form-control calendar"></span></div>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label for="children" class="form-label">Дети</label>
-                        <div class="form-inner">
-                            <input type="text" class="form-input" id="children">
-                            <span class="form-control plus"></span>
-                            <span class="form-control minus"></span>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="adults" class="form-label">Взрослые</label>
+                            <div class="form-inner">
+                                <input type="text" class="form-input" id="adults">
+                                <span class="form-control plus"></span>
+                                <span class="form-control minus"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="children" class="form-label">Дети</label>
+                            <div class="form-inner">
+                                <input type="text" class="form-input" id="children">
+                                <span class="form-control plus"></span>
+                                <span class="form-control minus"></span>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <input class="btn" type="submit" value="Найти">
-            </form>
-        </div>
-        <div class="map">
-            <img src="img/map.jpg" width="1200" height="593" alt="map">
-        </div>
+                    <input class="btn" type="submit" value="Найти">
+                </form>
+            </div>
+            <div class="map">
+                <img src="img/map.jpg" width="1200" height="593" alt="map">
+            </div>
+        </main>
         <footer class="main-footer">
             <section class="footer-visit">
-                <a class="btn" href="#">#VISITSEDONA</a>
+                <a class="" href="#">#VISITSEDONA</a>
             </section>
             <section class="footer-social">
                 <a class="social-btn social-btn-tw" href="#">Twitter</a>
@@ -144,7 +142,7 @@
             </section>
             <section class="footer-copyright">
                 <p>Website by</p>
-                <a class="btn" href="https://htmlacademy.ru">
+                <a class="" href="https://htmlacademy.ru">
                     <img src="img/logo-academy.png" width="113" height="39" alt="HTML Academy">
                 </a>
             </section>
