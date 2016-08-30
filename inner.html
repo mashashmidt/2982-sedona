@@ -4,15 +4,16 @@
 <head>
     <meta charset="utf-8">
     <title></title>
-    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
-    <!-- здесь тоже все оборачивать в один контейнер?-->
-    <header class="main-header">
-        <div class="container">
+<body class="inner-page">
+    <div class="container">
+        <header class="main-header clearfix">
             <nav class="main-navigation">
-                <div class="logo">
+                <div class="logo-sedona">
                     <a href="#">
                         <img src="img/logo-sedona.png" width="138" height="70" alt="Sedona">
                     </a>
@@ -25,145 +26,148 @@
                         <a href="#">Фото и видео</a>
                     </li>
                     <li class="nav-right">
-                        <a href="#">Карта штата</a>
+                        <a href="#">Гостиницы</a>
                     </li>
                     <li class="nav-right">
-                        <a href="#">Гостиницы</a>
+                        <a href="#">Карта штата</a>
                     </li>
                 </ul>
             </nav>
-        </div>
-    </header>
-    <main class="container">
-        <!-- вопрос с классом -->
-        <div class="filter-container">
-            <form class="filter" action="№" method="post">
-                <div class="filter-block">
-                    <h2 class="filter-title">Инфраструктура:</h2>
-                    <label class="filter-label">
-                        <input class="filter-input filter-checkbox" type="checkbox" name="infrastructure" value="pool" checked><span>Бассейн</span>
-                    </label>
-                    <label class="filter-label">
-                        <input class="filter-input filter-checkbox" type="checkbox" name="infrastructure" value="parking"><span>Парковка</span>
-                    </label>
-                    <label class="filter-label">
-                        <input class="filter-input filter-checkbox" type="checkbox" name="infrastructure" value="wifi"><span>Wi-Fi</span>
-                    </label>
-                </div>
-                <div class="filter-block">
-                    <h2 class="filter-title">Тип жилья:</h2>
-                    <label class="filter-label">
-                        <input class="filter-input filter-checkbox" type="checkbox" name="housing" value="hotel" checked><span>Гостиница</span>
-                    </label>
-                    <label class="filter-label">
-                        <input class="filter-input filter-checkbox" type="checkbox" name="housing" value="motel" checked><span>Мотель</span>
-                    </label>
-                    <label class="filter-label">
-                        <input class="filter-input filter-checkbox" type="checkbox" name="housing" value="apartments" checked><span>Апартаменты</span>
-                    </label>
-                </div>
-                <!-- ползунки -->
-                <div class="filter-block">
-                    <h2 class="filter-title">Стоимость в сутки (Р):</h2>
-                    <div class="range-filter">
-                        <div class="price-controls">
-                            <input class="min-price" type="text" value="от 0">
-                            <input class="max-price" type="text" value="до 3000">
-                        </div>
-                        <div class="range-controls">
-                            <div class="scale"></div>
-                            <div class="toggle min-toggle"></div>
-                            <div class="toggle max-toggle"></div>
-                        </div>
+        </header>
+        <main class="main-content">
+            <div class="filter-container">
+                <form class="filter" action="№" method="post">
+                    <div class="filter-block">
+                        <h2 class="filter-title">Инфраструктура:</h2>
+                        <label class="filter-label">
+                            <input class="filter-input filter-checkbox" type="checkbox" name="infrastructure" value="pool" checked><span>Бассейн</span>
+                        </label>
+                        <label class="filter-label">
+                            <input class="filter-input filter-checkbox" type="checkbox" name="infrastructure" value="parking"><span>Парковка</span>
+                        </label>
+                        <label class="filter-label">
+                            <input class="filter-input filter-checkbox" type="checkbox" name="infrastructure" value="wifi"><span>Wi-Fi</span>
+                        </label>
                     </div>
-                    <input class="btn filter-btn" type="submit" value="Показать">
+                    <div class="filter-block">
+                        <h2 class="filter-title">Тип жилья:</h2>
+                        <label class="filter-label">
+                            <input class="filter-input filter-checkbox" type="checkbox" name="housing" value="hotel" checked><span>Гостиница</span>
+                        </label>
+                        <label class="filter-label">
+                            <input class="filter-input filter-checkbox" type="checkbox" name="housing" value="motel" checked><span>Мотель</span>
+                        </label>
+                        <label class="filter-label">
+                            <input class="filter-input filter-checkbox" type="checkbox" name="housing" value="apartments" checked><span>Апартаменты</span>
+                        </label>
+                    </div>
+                    <!-- ползунки -->
+                    <div class="filter-block">
+                        <h2 class="filter-title">Стоимость в сутки (Р):</h2>
+                        <div class="range-filter">
+                            <div class="price-controls">
+                                <input class="min-price" type="text" value="от 0">
+                                <input class="max-price" type="text" value="до 3000">
+                            </div>
+                            <div class="range-controls">
+                                <div class="scale"></div>
+                                <div class="toggle min-toggle"></div>
+                                <div class="toggle max-toggle"></div>
+                            </div>
+                        </div>
+                        <input class="filter-btn" type="submit" value="Показать">
+                    </div>
+                </form>
+            </div>
+            <div class="sort clearfix">
+                <div class="sort-found">
+                    <span>Найдено:3</span>
                 </div>
-            </form>
-        </div>
-        <div class="sort">
-            <div class="sort-found">
-                <span>Найдено:3</span>
-            </div>
-            <!-- можешь объяснить плз, почему без списка? и праавильное оформление получилось? -->
-            <div class="sort-type">
-                <span>Сортировка:</span>
-                <span>По цене</span>
-                <a href="#">По типу</a>
-                <a href="#">По рейтингу</a>
-            </div>
-            <div class="sort-dir">
-                <a href="#"></a>
-                <a href="#"></a>
-            </div>
-        </div>
-        <div class="hotel">
-            <div class="hotel-image">
-                <img src="img/hotel-amara.jpg" width="135" height="90" alt="amara resort">
-            </div>
-            <div class="hotel-info">
-                <h2 class="hotel-name">Amara resort &amp; spa</h2>
-                <!-- при таком оформлении можно будет точно подогнать цену к началу кнопки забронировать, да? -->
-                <div>
-                    <span>Гостиница</span>
-                    <span>от 3500 Р.</span>
+                <!-- можешь объяснить плз, почему без списка? и праавильное оформление получилось? -->
+                <div class="sort-type">
+                    <span>Сортировка:</span>
+                    <span>По цене</span>
+                    <a href="#">По типу</a>
+                    <a href="#">По рейтингу</a>
                 </div>
-                <div>
-                    <a class="btn" href="#">Подробнее</a>
-                    <a class="btn" href="#">Забронировать</a>
-                </div>
-            </div>
-            <div class="hotel-rating">
-                <span class="stars stars-4"></span>
-                <span class="rating">Рейтинг: 8,5</span>
-            </div>
-        </div>
-        <div class="hotel">
-            <div class="hotel-image">
-                <img src="img/hotel-desert.jpg" width="135" height="90" alt=" desert inn">
-            </div>
-            <div class="hotel-info">
-                <h2 class="hotel-name">Desert Quail Inn</h2>
-                <!-- вопрос с оформлением -->
-                <div>
-                    <span>Мотель</span>
-                    <span>от 2000 Р.</span>
-                </div>
-                <div>
-                    <a class="btn" href="#">Подробнее</a>
-                    <a class="btn" href="#">Забронировать</a>
+                <div class="sort-dir">
+                    <a href="#"></a>
+                    <a href="#"></a>
                 </div>
             </div>
-            <div class="hotel-rating">
-                <span class="stars stars-2"></span>
-                <span class="rating">Рейтинг: 8,9</span>
-            </div>
-        </div>
-        <div class="hotel">
-            <div class="hotel-image">
-                <img src="img/hotel-villas.jpg" width="135" height="90" alt="villas">
-            </div>
-            <div class="hotel-info">
-                <h2 class="hotel-name">Villas at Poco Diablo</h2>
-                <!-- вопрос с оформлением -->
-                <div>
-                    <span>Апартаменты</span>
-                    <span>от 4000 Р.</span>
+            <div class="hotel clearfix">
+                <div class="hotel-image">
+                    <img src="img/hotel-amara.jpg" width="135" height="90" alt="amara resort">
                 </div>
-                <div>
-                    <a class="btn" href="#">Подробнее</a>
-                    <a class="btn" href="#">Забронировать</a>
+                <div class="hotel-info">
+                    <a href="#">
+                        <h2 class="hotel-name">Amara resort &amp; spa</h2>
+                    </a>
+                    <!-- при таком оформлении можно будет точно подогнать цену к началу кнопки забронировать, да? -->
+                    <div>
+                        <span>Гостиница</span>
+                        <span>от 3500 Р.</span>
+                    </div>
+                    <div>
+                        <a class="btn info-btn" href="#">Подробнее</a>
+                        <a class="btn book-btn" href="#">Забронировать</a>
+                    </div>
+                </div>
+                <div class="hotel-rating">
+                    <span class="stars stars-4"></span>
+                    <span class="rating">Рейтинг: 8,5</span>
                 </div>
             </div>
-            <div class="hotel-rating">
-                <span class="stars stars-3"></span>
-                <span class="rating">Рейтинг: 9,2</span>
+            <div class="hotel clearfix">
+                <div class="hotel-image">
+                    <img src="img/hotel-desert.jpg" width="135" height="90" alt=" desert inn">
+                </div>
+                <div class="hotel-info">
+                    <a href="#">
+                        <h2 class="hotel-name">Desert Quail Inn</h2>
+                    </a>
+                    <!-- вопрос с оформлением -->
+                    <div>
+                        <span>Мотель</span>
+                        <span>от 2000 Р.</span>
+                    </div>
+                    <div>
+                        <a class="btn info-btn" href="#">Подробнее</a>
+                        <a class="btn book-btn" href="#">Забронировать</a>
+                    </div>
+                </div>
+                <div class="hotel-rating">
+                    <span class="stars stars-2"></span>
+                    <span class="rating">Рейтинг: 8,9</span>
+                </div>
             </div>
-        </div>
-    </main>
-    <footer class="main-footer">
-        <div class="container">
+            <div class="hotel clearfix">
+                <div class="hotel-image">
+                    <img src="img/hotel-villas.jpg" width="135" height="90" alt="villas">
+                </div>
+                <div class="hotel-info">
+                    <a href="#">
+                        <h2 class="hotel-name">Villas at Poco Diablo</h2>
+                    </a>
+                    <!-- вопрос с оформлением -->
+                    <div>
+                        <span>Апартаменты</span>
+                        <span>от 4000 Р.</span>
+                    </div>
+                    <div>
+                        <a class="btn info-btn" href="#">Подробнее</a>
+                        <a class="btn book-btn" href="#">Забронировать</a>
+                    </div>
+                </div>
+                <div class="hotel-rating">
+                    <span class="stars stars-3"></span>
+                    <span class="rating">Рейтинг: 9,2</span>
+                </div>
+            </div>
+        </main>
+        <footer class="main-footer clearfix">
             <section class="footer-visit">
-                <a class="btn" href="#">#VISITSEDONA</a>
+                <span>#VISITSEDONA</span>
             </section>
             <section class="footer-social">
                 <a class="social-btn social-btn-tw" href="#">Twitter</a>
@@ -172,12 +176,12 @@
             </section>
             <section class="footer-copyright">
                 <p>Website by</p>
-                <a class="btn" href="https://htmlacademy.ru">
+                <a class="" href="https://htmlacademy.ru">
                     <img src="img/logo-academy.png" width="113" height="39" alt="HTML Academy">
                 </a>
             </section>
-        </div>
-    </footer>
+        </footer>
+    </div>
 </body>
 
 </html>
