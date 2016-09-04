@@ -14,7 +14,7 @@
         <header class="main-header clearfix">
             <nav class="main-navigation">
                 <div class="logo-sedona">
-                    <a href="#">
+                    <a href="index.html">
                         <img src="img/logo-sedona.png" width="138" height="70" alt="Sedona">
                     </a>
                 </div>
@@ -26,7 +26,7 @@
                         <a href="#">Фото и видео</a>
                     </li>
                     <li class="nav-right">
-                        <a href="#">Гостиницы</a>
+                        <a class="active" href="#">Гостиницы</a>
                     </li>
                     <li class="nav-right">
                         <a href="#">Карта штата</a>
@@ -36,57 +36,50 @@
         </header>
         <main class="main-content">
             <div class="filter-container">
-                <form class="filter" action="№" method="post">
-                    <div class="filter-block">
+                <form class="filter clearfix" action="№" method="post">
+                    <div class="filter-block infrastructure clearfix">
                         <h2 class="filter-title">Инфраструктура:</h2>
-                        <label class="filter-label">
-                            <input class="filter-input filter-checkbox" type="checkbox" name="infrastructure" value="pool" checked><span>Бассейн</span>
-                        </label>
-                        <label class="filter-label">
-                            <input class="filter-input filter-checkbox" type="checkbox" name="infrastructure" value="parking"><span>Парковка</span>
-                        </label>
-                        <label class="filter-label">
-                            <input class="filter-input filter-checkbox" type="checkbox" name="infrastructure" value="wifi"><span>Wi-Fi</span>
-                        </label>
+                        <input class="filter-input filter-checkbox" type="checkbox" name="infrastructure" id="pool" value="pool" checked>
+                        <label for="pool" class="filter-label">Бассейн</label>
+                        <input class="filter-input filter-checkbox" type="checkbox" name="infrastructure" id="parking" value="parking">
+                        <label for="parking" class="filter-label">Парковка</label>
+                        <input class="filter-input filter-checkbox" type="checkbox" name="infrastructure" id="wifi" value="wifi">
+                        <label for="wifi" class="filter-label">Wi-Fi</label>
                     </div>
-                    <div class="filter-block">
+                    <div class="filter-block housing clearfix">
                         <h2 class="filter-title">Тип жилья:</h2>
-                        <label class="filter-label">
-                            <input class="filter-input filter-checkbox" type="checkbox" name="housing" value="hotel" checked><span>Гостиница</span>
-                        </label>
-                        <label class="filter-label">
-                            <input class="filter-input filter-checkbox" type="checkbox" name="housing" value="motel" checked><span>Мотель</span>
-                        </label>
-                        <label class="filter-label">
-                            <input class="filter-input filter-checkbox" type="checkbox" name="housing" value="apartments" checked><span>Апартаменты</span>
-                        </label>
+                        <input class="filter-input filter-checkbox" type="checkbox" name="housing" id="hotel" value="hotel" checked>
+                        <label for="hotel" class="filter-label">Гостиница</label>
+                        <input class="filter-input filter-checkbox" type="checkbox" name="housing" id="motel" value="motel" checked>
+                        <label for="motel" class="filter-label">Мотель</label>
+                        <input class="filter-input filter-checkbox" type="checkbox" name="housing" id="apartments" value="apartments" checked>
+                        <label for="apartments" class="filter-label">Апартаменты</label>
                     </div>
                     <!-- ползунки -->
-                    <div class="filter-block">
+                    <div class="filter-block filter-range clearfix">
                         <h2 class="filter-title">Стоимость в сутки (Р):</h2>
-                        <div class="range-filter">
-                            <div class="price-controls">
-                                <input class="min-price" type="text" value="от 0">
-                                <input class="max-price" type="text" value="до 3000">
-                            </div>
-                            <div class="range-controls">
-                                <div class="scale"></div>
-                                <div class="toggle min-toggle"></div>
-                                <div class="toggle max-toggle"></div>
-                            </div>
+                        <div class="price-controls">
+                            <label class="min-price">от<input type="text" name="min-price" value="0"></label>
+                            <label class="max-price">до<input type="text" name="max-price" value="3000"></label>
                         </div>
-                        <input class="filter-btn" type="submit" value="Показать">
+                        <div class="range-controls">
+                            <div class="scale">
+                                <div class="bar"></div>
+                            </div>
+                            <div class="range-toggle range-toggle-min"></div>
+                            <div class="range-toggle range-toggle-max"></div>
+                        </div>
+                        <button class="filter-btn" type="submit"> Показать</button>
                     </div>
                 </form>
             </div>
-            <div class="sort clearfix">
+            <div class="sort">
                 <div class="sort-found">
                     <span>Найдено:3</span>
                 </div>
-                <!-- можешь объяснить плз, почему без списка? и праавильное оформление получилось? -->
                 <div class="sort-type">
                     <span>Сортировка:</span>
-                    <span>По цене</span>
+                    <span class="active">По цене</span>
                     <a href="#">По типу</a>
                     <a href="#">По рейтингу</a>
                 </div>
@@ -103,12 +96,11 @@
                     <a href="#">
                         <h2 class="hotel-name">Amara resort &amp; spa</h2>
                     </a>
-                    <!-- при таком оформлении можно будет точно подогнать цену к началу кнопки забронировать, да? -->
-                    <div>
+                    <div class="hotel-text">
                         <span>Гостиница</span>
                         <span>от 3500 Р.</span>
                     </div>
-                    <div>
+                    <div class="hotel-btn">
                         <a class="btn info-btn" href="#">Подробнее</a>
                         <a class="btn book-btn" href="#">Забронировать</a>
                     </div>
@@ -126,12 +118,11 @@
                     <a href="#">
                         <h2 class="hotel-name">Desert Quail Inn</h2>
                     </a>
-                    <!-- вопрос с оформлением -->
-                    <div>
+                    <div class="hotel-text">
                         <span>Мотель</span>
                         <span>от 2000 Р.</span>
                     </div>
-                    <div>
+                    <div class="hotel-btn">
                         <a class="btn info-btn" href="#">Подробнее</a>
                         <a class="btn book-btn" href="#">Забронировать</a>
                     </div>
@@ -149,12 +140,11 @@
                     <a href="#">
                         <h2 class="hotel-name">Villas at Poco Diablo</h2>
                     </a>
-                    <!-- вопрос с оформлением -->
-                    <div>
+                    <div class="hotel-text">
                         <span>Апартаменты</span>
                         <span>от 4000 Р.</span>
                     </div>
-                    <div>
+                    <div class="hotel-btn">
                         <a class="btn info-btn" href="#">Подробнее</a>
                         <a class="btn book-btn" href="#">Забронировать</a>
                     </div>
@@ -176,9 +166,7 @@
             </section>
             <section class="footer-copyright">
                 <p>Website by</p>
-                <a class="" href="https://htmlacademy.ru">
-                    <img src="img/logo-academy.png" width="113" height="39" alt="HTML Academy">
-                </a>
+                <a class="copyright-logo logo-academy" href="https://htmlacademy.ru">HTML Academy</a>
             </section>
         </footer>
     </div>

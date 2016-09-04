@@ -59,7 +59,7 @@ body {
 }
 
 .main-navigation li a:active {
-    color: rgba(0,0,0,0.3);
+    color: rgba(0, 0, 0, 0.3);
 }
 
 .main-navigation li .active {
@@ -71,7 +71,7 @@ body {
 }
 
 .main-navigation li .active:active {
-    color: rgba(118,99,87,0.3);
+    color: rgba(118, 99, 87, 0.3);
 }
 
 .nav-left {
@@ -172,14 +172,14 @@ h2 {
     text-align: center;
     background: #ffffff;
     min-height: 330px;
-    padding-top: 50px;  
+    padding-top: 50px;
 }
 
 .features-row-white .features-item {
     float: left;
     width: 33%;
     padding-left: 40px;
-    padding-right: 40px; 
+    padding-right: 40px;
 }
 
 .features-name {
@@ -247,7 +247,6 @@ h2 {
     width: 33%;
     padding-left: 50px;
     padding-right: 50px;
-    
 }
 
 .features {
@@ -279,7 +278,7 @@ h2 {
 }
 
 .search-form button {
-    position: relative; 
+    position: relative;
     width: 568px;
     padding-top: 30px;
     padding-bottom: 30px;
@@ -293,7 +292,7 @@ h2 {
     width: 568px;
     padding: 55px;
     background: #ffffff;
-    box-shadow: 0px 7px 15px rgba(0,0,0,0.15);
+    box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.15);
     font-family: "PTSans Regular", "Arial", sans-serif;
     font-size: 14px;
     line-height: 21px;
@@ -306,6 +305,7 @@ h2 {
     padding: 8px 12px;
     background: #f2f2f2;
     border: none;
+    outline: none;
     font-family: "PTSans Regular", "Arial", sans-serif;
     font-size: 14px;
     line-height: 21px;
@@ -321,7 +321,6 @@ h2 {
 
 .search-form input:focus {
     background: #ffffff;
-    outline: none;
     border: 2px solid #e5e5e5;
 }
 
@@ -330,13 +329,55 @@ h2 {
 }
 
 .form label {
-    float: left; 
+    float: left;
     width: 112px;
 }
 
 .form .form-inner {
     float: right;
     width: 346px;
+    position: relative;
+}
+
+.form .form-input {
+    padding-right: 38px;
+}
+
+.form .form-control {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 38px;
+    height: 38px;
+    cursor: pointer;
+}
+
+.form .form-control::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: url("../img/sprite.png") no-repeat;
+}
+
+.form .calendar::before {
+    width: 21px;
+    height: 22px;
+    background-position: -10px -10px;
+}
+
+.form .calendar:hover::before {
+    width: 21px;
+    height: 22px;
+    background-position: -10px -94px;
+}
+
+.form .calendar:active::before {
+    width: 21px;
+    height: 22px;
+    background-position: -10px -52px;
 }
 
 .form .form-group {
@@ -348,21 +389,39 @@ h2 {
     width: 226px;
 }
 
-.form-row .group-adults {
-    float: left;
+.form-row .form-inner {
+    float: right;
+    width: 114px;
+    position: relative;
 }
 
-.group-adults .form-control {
-    position: relative;
-    display: inline-block;
-    vertical-align: top;
+.form-row .form-input {
+    padding-right: 38px;
+    padding-left: 38px;
+    text-align: center;
+}
+
+.form-row .form-control.minus {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 38px;
     height: 38px;
-    background: #f2f2f2;
     cursor: pointer;
 }
 
-.group-adults .form-control::before {
+.form-row .form-control.plus {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 38px;
+    height: 38px;
+    cursor: pointer;
+}
+
+.form-row .form-control::before {
     content: "";
     position: absolute;
     top: 50%;
@@ -371,40 +430,44 @@ h2 {
     background: url("../img/sprite.png") no-repeat;
 }
 
-.group-adults .minus::before {
+.form-row .form-control.minus::before {
     width: 12px;
     height: 3px;
     background-position: -10px -667px;
 }
 
-.group-adults .minus:hover::before {
+.form-row .form-control.minus:hover::before {
     width: 12px;
     height: 3px;
     background-position: -10px -713px;
 }
 
-.group-adults .minus:active::before {
+.form-row .form-control.minus:active::before {
     width: 12px;
     height: 3px;
     background-position: -10px -690px;
 }
 
-.group-adults .plus::before {
+.form-row .form-control.plus::before {
     width: 11px;
     height: 11px;
     background-position: -10px -736px;
 }
 
-.group-adults .plus:hover::before {
+.form-row .form-control.plus:hover::before {
     width: 11px;
     height: 11px;
     background-position: -10px -798px;
 }
 
-.group-adults .plus:active::before {
+.form-row .form-control.plus:active::before {
     width: 11px;
     height: 11px;
     background-position: -10px -767px;
+}
+
+.form-row .group-adults {
+    float: left;
 }
 
 .form-row .group-children {
@@ -420,17 +483,6 @@ h2 {
     width: 72px;
 }
 
-.form-row .form-inner {
-    float: right;
-    width: 114px;
-    font-size: 0;
-}
-
-.form-row .form-input {
-    width: 38px;
-    height: 38px;
-}
-
 .search-form .search-btn {
     width: 100%;
     margin-top: 55px;
@@ -440,6 +492,7 @@ h2 {
     padding-bottom: 16px;
     background: #81b3d2;
     color: #ffffff;
+    cursor: pointer;
 }
 
 .search-form .search-btn:hover {
@@ -448,7 +501,7 @@ h2 {
 
 .search-form .search-btn:active {
     background: #5496bd;
-    color: rgba(255,255,255,0.3);
+    color: rgba(255, 255, 255, 0.3);
 }
 
 .map {
@@ -556,81 +609,49 @@ h2 {
     margin-right: 3px;
 }
 
-.footer-copyright img {
+.footer-copyright a {
     display: inline-block;
     vertical-align: middle;
 }
 
-.sprite {
-    background-image: url("../img/sprite.png");
-    background-repeat: no-repeat;
+.copyright-logo {
+    position: relative;
     display: block;
+    font-size: 0;
+    width: 113px;
+    height: 39px;
 }
 
-.sprite-calendar {
-    width: 21px;
-    height: 22px;
-    background-position: -10px -10px;
+.copyright-logo::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("../img/sprite.png") no-repeat;
 }
 
-.sprite-calendar-active {
-    width: 21px;
-    height: 22px;
-    background-position: -10px -52px;
+.logo-academy::before {
+    width: 113px;
+    height: 39px;
+    background-position: -10px -490px;
 }
 
-.sprite-calendar-hvr {
-    width: 21px;
-    height: 22px;
-    background-position: -10px -94px;
+.logo-academy:hover::before {
+    width: 113px;
+    height: 39px;
+    background-position: -10px -608px;
 }
 
-.sprite-ch-disab {
-    width: 22px;
-    height: 22px;
-    background-position: -10px -136px;
-}
-
-.sprite-ch-disab-2 {
-    width: 26px;
-    height: 22px;
-    background-position: -10px -178px;
-}
-
-.sprite-checkbox---empty {
-    width: 22px;
-    height: 22px;
-    background-position: -10px -220px;
-}
-
-.sprite-checkbox-checked {
-    width: 26px;
-    height: 22px;
-    background-position: -10px -262px;
+.logo-academy:active::before {
+    width: 113px;
+    height: 39px;
+    background-position: -10px -549px;
 }
 
 .sprite-icon-stars {
     width: 89px;
     height: 17px;
     background-position: -10px -382px;
-}
-
-.sprite-logo-academy {
-    width: 113px;
-    height: 39px;
-    background-position: -10px -490px;
-}
-
-.sprite-logo-academy-active {
-    width: 113px;
-    height: 39px;
-    background-position: -10px -549px;
-}
-
-.sprite-logo-academy-hvr {
-    width: 113px;
-    height: 39px;
-    background-position: -10px -608px;
 }
 
 
@@ -642,12 +663,23 @@ h2 {
     background: #425e74 url("../img/filter-background.jpg") no-repeat;
     background-position: 100% 50%;
     background-size: cover;
-    margin-bottom: 30px;
 }
 
 .filter {
-    padding: 25px 6%;
+    padding-top: 15px;
+    padding-left: 6%;
+    padding-right: 6%;
     color: #ffffff;
+}
+
+.filter-block.infrastructure {
+    float: left;
+    width: 240px;
+}
+
+.filter-block.housing {
+    float: left;
+    width: 290px;
 }
 
 .filter .filter-title {
@@ -662,16 +694,216 @@ h2 {
     display: block;
     margin: 23px 0;
     line-height: 21px;
-    padding-left: 22px;
+    padding-left: 45px;
+    position: relative;
+    cursor: pointer;
+}
+
+.filter input[type="checkbox"]:not([disabled]) + label::before,
+.filter input[type="checkbox"] + label::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.filter input[type="checkbox"] + label::before {
+    width: 22px;
+    height: 22px;
+    background: url("../img/sprite.png") no-repeat;
+    background-position: -10px -220px;
+}
+
+.filter input[type="checkbox"]:checked + label::after {
+    width: 26px;
+    height: 22px;
+    background: url("../img/sprite.png") no-repeat;
+    background-position: -10px -262px;
+}
+
+.filter input[disabled] + label::after {
+    width: 22px;
+    height: 22px;
+    background: url("../img/sprite.png") no-repeat;
+    background-position: -10px -136px;
+}
+
+.filter input[disabled]:checked + label::after {
+    width: 26px;
+    height: 22px;
+    background: url("../img/sprite.png") no-repeat;
+    background-position: -10px -178px;
+}
+
+.filter-block.filter-range {
+    float: right;
+    width: 330px;
+}
+
+.filter-range .price-controls {
+    position: relative;
+    height: 36px;
+    padding-top: 5px;
+    margin-bottom: 20px;
+    font-size: 0;
+    border: 2px solid #ffffff;
+    border-radius: 2px;
+}
+
+.price-controls::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: 22px;
+    background: #ffffff;
+    transform: translate(-50%, -50%);
+}
+
+.price-controls label {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 21px;
+    vertical-align: top;
+    cursor: pointer;
+}
+
+.price-controls .min-price,
+.price-controls .max-price {
+    width: 150px;
+    padding-left: 65px;
+}
+
+.price-controls input {
+    width: 50px;
+    margin-left: 10px;
+    color: #ffffff;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.filter-range .range-controls {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.range-controls .scale {
+    height: 2px;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.range-controls .bar {
+    width: 80%;
+    height: 2px;
+    background: #ffffff;
+}
+
+.range-toggle {
+    position: absolute;
+    top: -9px;
+    width: 4px;
+    height: 4px;
+    background: #ababab;
+    box-sizing: content-box;
+    border: 8px solid #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+    cursor: pointer;
+}
+
+.range-toggle-min {
+    left: 0;
+}
+
+.range-toggle-max {
+    left: 80%;
+}
+
+.range-toggle:hover {
+    background: #1c4f80;
+}
+
+.filter-btn {
+    display: block;
+    margin: 0 auto;
+    padding: 6px 35px;
+    font-size: 14px;
+    line-height: 21px;
+    color: #ffffff;
+    text-transform: uppercase;
+    background: transparent;
+    border: 2px solid #ffffff;
+    border-radius: 2px;
+    outline: none;
+    cursor: pointer;
+}
+
+.filter-btn:hover {
+    color: #000000;
+    background: #ffffff;
 }
 
 .sort {
+    position: relative;
     padding: 30px 6%;
     border-bottom: 1px solid #e5e5e5;
 }
 
 .sort div {
-     display: inline-block;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.sort-found {
+    width: 135px;
+    margin-right: 30px;
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: bold;
+}
+
+.sort-type {
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.sort-type span,
+.sort-type a {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 30px;
+}
+
+.sort-type a {
+    color: rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    border-bottom: 1px dashed #81b3d2;
+}
+
+.sort-type a:hover {
+    color: #81b3d2;
+    border-bottom: 1px dashed #81b3d2;
+}
+
+.sort-type a:active {
+    color: #000000;
+    border: none;
+}
+
+.sort-type .active {
+    color: #81b3d2;
+}
+
+.sort-dir {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 11px;
+    height: 10px;
+    background: #cccccc;
 }
 
 .hotel {
@@ -689,7 +921,6 @@ h2 {
 
 .hotel-info {
     float: left;
-    width: 370px;
 }
 
 .hotel-info a {
@@ -707,16 +938,21 @@ h2 {
 }
 
 .hotel-name:active {
-    color: rgba(0,0,0,0.3);
+    color: rgba(0, 0, 0, 0.3);
 }
 
-.hotel span {
+.hotel-text span {
     display: inline-block;
     text-align: left;
     margin-bottom: 10px;
 }
 
-.hotel .btn {
+.hotel-text span:first-child {
+    width: 120px;
+    margin-right: 6px;
+}
+
+.hotel-btn .btn {
     display: inline-block;
     font-size: 14px;
     line-height: 21px;
@@ -726,6 +962,7 @@ h2 {
 }
 
 .info-btn {
+    width: 120px;
     background: #81b3d2;
 }
 
@@ -735,7 +972,7 @@ h2 {
 
 .info-btn:active {
     background: #5496bd;
-    color: rgba(255,255,255,0.3);
+    color: rgba(255, 255, 255, 0.3);
 }
 
 .book-btn {
@@ -748,10 +985,16 @@ h2 {
 
 .book-btn:active {
     background: #503e33;
-    color: rgba(255,255,255,0.3);
+    color: rgba(255, 255, 255, 0.3);
 }
 
 .hotel-rating {
     float: right;
     width: 110px;
+}
+
+.hotel-rating .rating {
+    display: block;
+    padding: 3px 15px;
+    background: #f2f2f2;
 }
