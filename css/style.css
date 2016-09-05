@@ -4,7 +4,7 @@
 
 body {
     min-width: 1200px;
-    font-family: "PTSans", "Arial", sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 14px;
     line-height: 21px;
     font-weight: 400;
@@ -114,7 +114,7 @@ body {
 }
 
 h1 {
-    font-family: "PTSans", "Arial", sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 30px;
     font-weight: 700;
     line-height: 24px;
@@ -123,7 +123,7 @@ h1 {
 }
 
 h2 {
-    font-family: "PTSans", "Arial", sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 21px;
     font-weight: 700;
     line-height: 21px;
@@ -291,6 +291,7 @@ h2 {
     font-size: 21px;
     line-height: 26px;
     background: #766357;
+    cursor: pointer;
 }
 
 .search-form form {
@@ -299,7 +300,7 @@ h2 {
     padding: 55px;
     background: #ffffff;
     box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.15);
-    font-family: "PTSans", "Arial", sans-serif;
+    font-family: "PT Sans", "Arial", sans-serif;
     font-size: 14px;
     line-height: 21px;
     font-weight: 700;
@@ -851,12 +852,12 @@ h2 {
 }
 
 .sort {
-    position: relative;
+    font-size: 0;
     padding: 30px 6%;
     border-bottom: 1px solid #e5e5e5;
 }
 
-.sort div {
+.sort > div {
     display: inline-block;
     vertical-align: middle;
 }
@@ -902,37 +903,67 @@ h2 {
     color: #81b3d2;
 }
 
+.sort-dir {
+    width: 110px;
+    line-height: 26px;
+    padding-left: 66px;
+}
 
-/*
-.sort-dir a {
+.sort-dir .arrow {
+    position: relative;
     display: inline-block;
+    width: 12px;
+    height: 12px;
     vertical-align: middle;
-    width: 30px;
-    height: 26px;
-}
-
-.sort-dir a::before {
-    
-} 
-
-.sort-dir .arrow-up {
-    width: 0;
-    height: 0;
-    border-left: 6px solid transparent;
-    border-right: 6px solid transparent;
-    border-bottom: 12px solid black;
-}
-
-.sort-dir .arrow-down {
-    width: 0;
-    height: 0;
-    border-left: 6px solid transparent;
-    border-right: 6px solid transparent;
-    border-top: 12px solid black;
     margin-left: 10px;
 }
 
-*/
+.sort-dir .arrow::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.sort-dir .arrow:hover:not(.active)::before {
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 12px solid #000000;
+}
+
+.sort-dir .arrow:active::before {
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 12px solid #81b3d2;
+}
+
+.sort-dir .arrow-up::before {
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 12px solid #cccccc;
+}
+
+.sort-dir .arrow-down::before {
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 12px solid #cccccc;
+}
+
+.sort-dir .arrow-down.active::before {
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 12px solid #81b3d2;
+}
 
 .hotel {
     position: relative;
