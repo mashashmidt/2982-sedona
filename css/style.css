@@ -26,6 +26,7 @@ body {
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
 }
 
+
 /* header */
 
 .main-header {
@@ -80,12 +81,14 @@ body {
 .nav-left {
     float: left;
     width: 20%;
+    margin-right: 30px;
 }
 
 .nav-right {
     float: right;
     width: 20%;
     text-align: right;
+    margin-left: 30px;
 }
 
 .logo-sedona {
@@ -109,7 +112,7 @@ body {
     background-position: bottom, 100% 20%;
     background-size: 100% 57px, cover;
     text-align: center;
-    margin-bottom: 56px;
+    margin-bottom: 60px;
 }
 
 .welcome {
@@ -136,12 +139,16 @@ h2 {
 
 .sedona-description {
     width: 600px;
-    line-height: 26px;
     text-align: center;
     background: #ffffff;
     margin-bottom: 56px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.sedona-description h2 {
+    line-height: 26px;
+    margin-bottom: 30px;
 }
 
 .features-inverse {
@@ -150,28 +157,52 @@ h2 {
     color: #ffffff;
 }
 
-.features-inverse .features-item h2 {
+.features-inverse h2 {
+    margin-bottom: 25px;
     color: #ffffff;
 }
 
+.features-inverse p {
+    margin-top: 20px;
+}
+
 .features-inverse .features-item {
-    padding-top: 50px;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-top: 35px;
+    padding-left: 47px;
+    padding-right: 47px;
+}
+
+.features-inverse .features-img {
+    width: 66.66%;
+    width: calc(100% / 3 * 2);
+    height: 256px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .features-row-item-img .features-item {
     float: left;
-    width: 34%;
+    width: 33.33%;
+    width: calc(100% / 3);
+}
+
+.features-row-img-item .features-item {
+    float: right;
+    width: 33.33%;
+    width: calc(100% / 3);
 }
 
 .features-row-item-img .features-img {
     float: right;
-    width: 66%;
-    height: 256px;
-    background: #4a7697 url("../img/features-image1.jpg") no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-color: #4a7697;
+    background-image: url("../img/features-image1.jpg");
+}
+
+.features-row-img-item .features-img {
+    float: left;
+    background-color: #4a7697;
+    background-image: url("../img/features-image2.jpg");
 }
 
 .features-row-white {
@@ -183,7 +214,8 @@ h2 {
 
 .features-row-white .features-item {
     float: left;
-    width: 33%;
+    width: 33.33%;
+    width: calc(100% / 3);
     padding-left: 50px;
     padding-right: 50px;
 }
@@ -192,6 +224,7 @@ h2 {
     position: relative;
     display: block;
     margin-top: 110px;
+    margin-bottom: 22px;
 }
 
 .features-house .features-name::before {
@@ -233,37 +266,33 @@ h2 {
     transform: translateX(-50%);
 }
 
-.features-row-img-item .features-item {
-    float: right;
-    width: 34%;
-}
-
-.features-row-img-item .features-img {
-    float: left;
-    width: 66%;
-    height: 256px;
-    background: #4a7697 url("../img/features-image2.jpg") no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
 .features-row-gray {
     text-align: center;
     background: #eeeeee;
     min-height: 256px;
-    padding-top: 45px;
+    padding-top: 28px;
 }
 
 .features-row-gray .features-item {
     float: left;
-    width: 33%;
+    width: 33.33%;
+    width: calc(100% / 3);
     padding-left: 60px;
     padding-right: 60px;
+}
+
+.features-row-gray h2 {
+    margin-bottom: 25px;
+}
+
+.features-row-gray p {
+    margin-top: 20px;
 }
 
 .features {
     margin-bottom: 50px;
 }
+
 
 /* search-form */
 
@@ -272,7 +301,16 @@ h2 {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 50px;
+    margin-bottom: 46px;
+}
+
+.search-description h1 {
+    margin-top: 55px;
+    margin-bottom: 30px;
+}
+
+.search-description p {
+    line-height: 24px;
 }
 
 .search-form {
@@ -413,6 +451,7 @@ h2 {
 
 .form-row .form-group {
     display: inline-block;
+    vertical-align: bottom;
     width: 226px;
 }
 
@@ -457,7 +496,6 @@ h2 {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     background: url("../img/sprite.png") no-repeat;
-    
 }
 
 .form-row .form-control.minus::before {
@@ -502,7 +540,7 @@ h2 {
 
 .form-row .group-children {
     float: right;
-    padding-left: 40px;
+    padding-left: 50px;
 }
 
 .form-row label {
@@ -510,7 +548,7 @@ h2 {
 }
 
 .group-children label {
-    width: 72px;
+    width: 62px;
 }
 
 .search-form .search-btn {
@@ -544,6 +582,7 @@ h2 {
     background-position: center top;
 }
 
+
 /* footer */
 
 .main-page .main-footer {
@@ -551,28 +590,32 @@ h2 {
     margin-top: -120px;
     background: rgba(255, 255, 255, 0.9);
     padding: 35px 70px;
-    text-align: center;
 }
 
 .footer-visit {
     float: left;
-    width: 33%;
+    width: 33.33%;
+    width: calc(100% / 3);
     font-size: 21px;
     line-height: 26px;
     font-weight: 700;
     text-transform: uppercase;
-    padding-top: 15px;
+    padding-top: 10px;
+    padding-left: 65px;
 }
+
 
 .footer-social {
     float: left;
-    width: 33%;
+    width: 33.33%;
+    width: calc(100% / 3);
     text-align: center;
 }
 
 .social-btn {
     position: relative;
     display: inline-block;
+    text-align: center;
     vertical-align: top;
     width: 46px;
     height: 48px;
@@ -638,7 +681,10 @@ h2 {
 
 .footer-copyright {
     float: right;
-    width: 33%;
+    width: 33.33%;
+    width: calc(100% / 3);
+    text-align: right;
+    padding-right: 35px;
 }
 
 .footer-copyright p {
@@ -686,6 +732,7 @@ h2 {
     background-position: -10px -549px;
 }
 
+
 /* inner-page */
 
 .filter-container {
@@ -706,6 +753,7 @@ h2 {
 .filter-block.infrastructure {
     float: left;
     width: 240px;
+    margin-right: 15px;
 }
 
 .filter-block.housing {
@@ -725,10 +773,10 @@ h2 {
 
 .filter input[type="checkbox"] + label {
     display: block;
-    margin: 23px 0;
+    margin: 25px 0;
     font-size: 14px;
     line-height: 21px;
-    padding-left: 45px;
+    padding-left: 43px;
     position: relative;
     cursor: pointer;
 }
@@ -772,6 +820,7 @@ h2 {
 .filter-block.filter-range {
     float: right;
     width: 330px;
+    padding-left: 13px;
 }
 
 .filter-range .price-controls {
@@ -863,7 +912,7 @@ h2 {
 .filter-btn {
     display: block;
     margin: 0 auto;
-    padding: 6px 35px;
+    padding: 6px 32px;
     font-size: 14px;
     line-height: 21px;
     color: #ffffff;
@@ -1003,12 +1052,14 @@ h2 {
 
 .hotel-name {
     line-height: 26px;
-    margin: 0;
+    margin-top: -3px;
     margin-bottom: 6px;
 }
 
 .hotel-name a {
     color: #000000;
+    display: inline-block;
+    vertical-align: top;
 }
 
 .hotel-name a:hover {
@@ -1021,13 +1072,14 @@ h2 {
 
 .hotel-text span {
     display: inline-block;
+    vertical-align: top;
     text-align: left;
-    margin-bottom: 10px;
+    margin-bottom: 13px;
 }
 
 .hotel-text span:first-child {
-    width: 120px;
-    margin-right: 6px;
+    width: 110px;
+    margin-right: 4px;
 }
 
 .hotel-btn .btn {
@@ -1035,13 +1087,13 @@ h2 {
     vertical-align: middle;
     font-size: 14px;
     line-height: 21px;
-    padding: 3px 15px;
-    margin-right: 6px;
+    padding: 3px 10px;
+    margin-right: 4px;
     text-decoration: none;
 }
 
 .info-btn {
-    width: 120px;
+    width: 110px;
     background: #81b3d2;
 }
 
@@ -1055,6 +1107,7 @@ h2 {
 }
 
 .book-btn {
+    width: 140px;
     background: #766357;
 }
 
@@ -1075,7 +1128,7 @@ h2 {
 .hotel-rating .stars {
     content: "";
     position: absolute;
-    top: 30px;
+    top: 23px;
     right: 6%;
     width: 110px;
     height: 27px;
@@ -1124,5 +1177,4 @@ h2 {
 .inner-page .main-footer {
     background: #ffffff;
     padding: 35px 70px;
-    text-align: center;
 }
