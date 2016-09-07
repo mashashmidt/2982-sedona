@@ -813,6 +813,7 @@ h2 {
     height: 22px;
     background: url("../img/sprite.png") no-repeat;
     background-position: -10px -136px;
+    cursor: default;
 }
 
 .filter input[disabled]:checked + label::after {
@@ -820,6 +821,7 @@ h2 {
     height: 22px;
     background: url("../img/sprite.png") no-repeat;
     background-position: -10px -178px;
+    cursor: default;
 }
 
 .filter-block.filter-range {
@@ -856,7 +858,6 @@ h2 {
     font-size: 14px;
     line-height: 21px;
     vertical-align: top;
-    cursor: pointer;
 }
 
 .price-controls .min-price,

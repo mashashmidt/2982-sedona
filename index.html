@@ -14,7 +14,9 @@
         <header class="main-header clearfix">
             <nav class="main-navigation">
                 <div class="logo-sedona">
-                    <img src="img/logo-sedona.png" width="138" height="70" alt="Sedona">
+                    <a href="index.html">
+                        <img src="img/logo-sedona.png" width="138" height="70" alt="Sedona">
+                    </a>
                 </div>
                 <ul>
                     <li class="nav-left">
@@ -99,25 +101,25 @@
                 </div>
                 <div class="search-form">
                     <button type="button" class="btn search-hotel-btn">Поиск гостиницы в Седоне</button>
-                    <form action="#" method="post" class="search-hotel-form form-show">
+                    <form action="#" method="post" class="search-hotel-form">
                         <div class="form">
                             <div class="form-group clearfix">
                                 <label for="check-in" class="form-label">Дата заезда:</label>
                                 <div class="form-inner">
-                                    <input type="text" class="form-input" id="check-in" value="24 апреля 2016">
+                                    <input type="text" class="form-input" id="check-in" name="check-in" value="24 апреля 2016">
                                     <span class="form-control calendar"></span></div>
                             </div>
                             <div class="form-group clearfix">
                                 <label for="check-out" class="form-label">Дата выезда:</label>
                                 <div class="form-inner">
-                                    <input type="text" class="form-input" id="check-out" value="4 июля 2016"><span class="form-control calendar"></span></div>
+                                    <input type="text" class="form-input" id="check-out" name="check-out" value="4 июля 2016"><span class="form-control calendar"></span></div>
                             </div>
                         </div>
                         <div class="form-row clearfix">
                             <div class="form-group group-adults">
                                 <label for="adults" class="form-label">Взрослые:</label>
                                 <div class="form-inner">
-                                    <input type="text" class="form-input" id="adults" value="2">
+                                    <input type="text" class="form-input" id="adults" name="adults" value="2">
                                     <span class="form-control minus"></span>
                                     <span class="form-control plus"></span>
                                 </div>
@@ -125,7 +127,7 @@
                             <div class="form-group group-children">
                                 <label for="children" class="form-label">Дети:</label>
                                 <div class="form-inner">
-                                    <input type="text" class="form-input" id="children" value="0">
+                                    <input type="text" class="form-input" id="children" name="children" value="0">
                                     <span class="form-control minus"></span>
                                     <span class="form-control plus"></span>
                                 </div>
@@ -156,15 +158,29 @@
     <script>
         var link = document.querySelector(".search-hotel-btn");
         var popup = document.querySelector(".search-hotel-form");
-        
+        var form = popup.querySelector("form");
+        var adults = popup.querySelector("[name=adults]");
+        var children = popup.querySelector("[name=children]");
+        var storage = localStorage.getItem("adults");
+
 
         link.addEventListener("click", function (event) {
             event.preventDefault();
-            popup.classList.add(".form-show");
+            if (popup.classList.contains("form-show")) {
+                popup.classList.remove("form-show");
+            } else {
+                popup.classList.add("form-show");
+            }
         });
 
-        
-
+        form.addEventListener("submit", function (event) {
+            if (!adults.value || !children.value) {
+                event.preventDefault();
+                console.log("Нужно ввести количество взрослых и детей");
+            } else {
+                localStorage.setItem("adults", adults.value);
+            }
+        });
     </script>
 </body>
 
