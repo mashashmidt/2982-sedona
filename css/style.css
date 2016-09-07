@@ -330,7 +330,7 @@ h2 {
     text-transform: uppercase;
 }
 
-.search-form button {
+.search-form .search-hotel-btn {
     position: relative;
     width: 568px;
     padding-top: 30px;
@@ -341,16 +341,16 @@ h2 {
     cursor: pointer;
 }
 
-.search-form button:hover {
+.search-form .search-hotel-btn:hover {
     background: #604e43;
 }
 
-.search-form button:active {
+.search-form .search-hotel-btn:active {
     background: #503e33;
     color: rgba(255, 255, 255, 0.3);
 }
 
-.search-form form {
+.search-form .search-hotel-form {
     position: absolute;
     width: 568px;
     padding: 55px;
@@ -362,6 +362,11 @@ h2 {
     font-weight: 700;
     text-transform: uppercase;
     color: #000000;
+    display: none;
+}
+
+.search-form .form-show {
+    display: block;
 }
 
 .search-form input {
