@@ -56,12 +56,17 @@ body {
 }
 
 .main-navigation li:nth-child(4n-2) {
-    margin-right: 20%
+    margin-left: 3%;
+    margin-right: 14%;
 }
 
 .main-navigation li:nth-child(4n-1),
-.main-navigation li:nth-child(4n){
+.main-navigation li:nth-child(4n) {
     text-align: right;
+}
+
+.main-navigation li:nth-child(4n-1) {
+    margin-right: 3%;
 }
 
 .main-navigation a {
@@ -419,7 +424,7 @@ h2 {
 
 .search-form .form-show {
     display: block;
-    animation: form-show linear 0.5s; 
+    animation: form-show linear 0.5s;
 }
 
 .search-form input {
