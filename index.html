@@ -19,17 +19,17 @@
                     </a>
                 </div>
                 <ul>
-                    <li class="nav-left">
+                    <li>
                         <a href="#">Информация</a>
                     </li>
-                    <li class="nav-left">
+                    <li>
                         <a href="#">Фото и видео</a>
                     </li>
-                    <li class="nav-right">
-                        <a href="inner.html">Гостиницы</a>
-                    </li>
-                    <li class="nav-right">
+                    <li>
                         <a href="#">Карта штата</a>
+                    </li>
+                    <li>
+                        <a href="inner.html">Гостиницы</a>
                     </li>
                 </ul>
             </nav>
@@ -100,8 +100,8 @@
                         <br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
                 </div>
                 <div class="search-form">
-                    <button type="button" class="btn search-hotel-btn">Поиск гостиницы в Седоне</button>
-                    <form action="#" method="post" class="search-hotel-form">
+                    <a class="btn search-hotel-btn">Поиск гостиницы в Седоне</a>
+                    <form action="inner.html" method="post" class="search-hotel-form">
                         <div class="form">
                             <div class="form-group clearfix">
                                 <label for="check-in" class="form-label">Дата заезда:</label>
@@ -138,6 +138,7 @@
                 </div>
             </div>
             <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d418731.1189384804!2d-111.5960119065372!3d34.92308758809994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2sSedona%2C+AZ+86336%2C+USA!5e0!3m2!1sen!2sru!4v1473371950849" width="1200" height="595" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
         </main>
         <footer class="main-footer clearfix">
@@ -155,33 +156,7 @@
             </section>
         </footer>
     </div>
-    <script>
-        var link = document.querySelector(".search-hotel-btn");
-        var popup = document.querySelector(".search-hotel-form");
-        var form = popup.querySelector("form");
-        var adults = popup.querySelector("[name=adults]");
-        var children = popup.querySelector("[name=children]");
-        var storage = localStorage.getItem("adults");
-
-
-        link.addEventListener("click", function (event) {
-            event.preventDefault();
-            if (popup.classList.contains("form-show")) {
-                popup.classList.remove("form-show");
-            } else {
-                popup.classList.add("form-show");
-            }
-        });
-
-        form.addEventListener("submit", function (event) {
-            if (!adults.value || !children.value) {
-                event.preventDefault();
-                console.log("Нужно ввести количество взрослых и детей");
-            } else {
-                localStorage.setItem("adults", adults.value);
-            }
-        });
-    </script>
+    <script src="../2982-sedona/js/script-min.js"></script>
 </body>
 
 </html>

@@ -51,6 +51,17 @@ body {
     font-size: 14px;
     line-height: 26px;
     font-weight: bold;
+    float: left;
+    width: 20%;
+}
+
+.main-navigation li:nth-child(4n-2) {
+    margin-right: 20%
+}
+
+.main-navigation li:nth-child(4n-1),
+.main-navigation li:nth-child(4n){
+    text-align: right;
 }
 
 .main-navigation a {
@@ -76,19 +87,6 @@ body {
 
 .main-navigation li .active:active {
     color: rgba(118, 99, 87, 0.3);
-}
-
-.nav-left {
-    float: left;
-    width: 20%;
-    margin-right: 30px;
-}
-
-.nav-right {
-    float: right;
-    width: 20%;
-    text-align: right;
-    margin-left: 30px;
 }
 
 .logo-sedona {
@@ -331,6 +329,7 @@ h2 {
 }
 
 .search-form .search-hotel-btn {
+    display: block;
     position: relative;
     width: 568px;
     padding-top: 30px;
@@ -339,6 +338,8 @@ h2 {
     line-height: 26px;
     background: #766357;
     cursor: pointer;
+    outline: none;
+    z-index: 10;
 }
 
 .search-form .search-hotel-btn:hover {
@@ -348,6 +349,57 @@ h2 {
 .search-form .search-hotel-btn:active {
     background: #503e33;
     color: rgba(255, 255, 255, 0.3);
+}
+
+@-webkit-keyframes form-error {
+    0% {
+        transform: translateX(30px);
+    }
+    30% {
+        transform: translateX(-30px);
+    }
+    60% {
+        transform: translateX(30px);
+    }
+    90% {
+        transform: translateX(-30px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes form-error {
+    0% {
+        transform: translateX(30px);
+    }
+    30% {
+        transform: translateX(-30px);
+    }
+    60% {
+        transform: translateX(30px);
+    }
+    90% {
+        transform: translateX(-30px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes form-show {
+    0% {
+        transform: translateY(-80px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.form-show.error {
+    outline: 1px solid red;
+    -webkit-animation: form-error linear 0.5s;
+    animation: form-error linear 0.5s;
 }
 
 .search-form .search-hotel-form {
@@ -367,6 +419,7 @@ h2 {
 
 .search-form .form-show {
     display: block;
+    animation: form-show linear 0.5s; 
 }
 
 .search-form input {
@@ -408,7 +461,7 @@ h2 {
 }
 
 .form .form-input {
-    padding-right: 38px;
+    padding-right: 37px;
 }
 
 .form .form-control {
@@ -416,9 +469,10 @@ h2 {
     position: absolute;
     top: 0;
     right: 0;
-    width: 38px;
-    height: 38px;
+    width: 37px;
+    height: 37px;
     cursor: pointer;
+    background: #f2f2f2;
 }
 
 .form .form-control::before {
@@ -467,29 +521,29 @@ h2 {
 }
 
 .form-row .form-input {
-    padding-right: 38px;
-    padding-left: 38px;
+    padding-right: 37px;
+    padding-left: 37px;
     text-align: center;
 }
 
-.form-row .form-control.minus {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 38px;
-    height: 38px;
-    cursor: pointer;
-}
-
+.form-row .form-control.minus,
 .form-row .form-control.plus {
     content: "";
     position: absolute;
+    width: 37px;
+    height: 37px;
+    cursor: pointer;
+    background: #f2f2f2;
+}
+
+.form-row .form-control.minus {
+    top: 0;
+    left: 0;
+}
+
+.form-row .form-control.plus {
     top: 0;
     right: 0;
-    width: 38px;
-    height: 38px;
-    cursor: pointer;
 }
 
 .form-row .form-control::before {
@@ -582,9 +636,6 @@ h2 {
 .map {
     width: 100%;
     height: 595px;
-    background: #425e74 url("../img/map.jpg") no-repeat;
-    background-size: cover;
-    background-position: center top;
 }
 
 
@@ -608,7 +659,6 @@ h2 {
     padding-top: 10px;
     padding-left: 65px;
 }
-
 
 .footer-social {
     float: left;
@@ -742,7 +792,7 @@ h2 {
 
 .filter-container {
     width: 100%;
-    height: 217px;
+    min-height: 217px;
     background: #425e74 url("../img/filter-background.jpg") no-repeat;
     background-position: 100% 50%;
     background-size: cover;
